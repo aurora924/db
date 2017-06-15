@@ -56,3 +56,4 @@ dat <- tibble(title,
               desc = map_chr(info, 'desc'), 
               holding = map_chr(info, 'holding'), 
               rel = map_chr(info, ~paste0(.x$rel, collapse = ' | ')))
+write_csv(dat, file.choose())
